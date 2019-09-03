@@ -52,6 +52,7 @@ def parse_media_option(mo):
         if m.startswith('http'):
             m = re.sub(r'tidal.com\/.{2}\/store\/', 'tidal.com/', m)
             m = re.sub(r'tidal.com\/store\/', 'tidal.com/', m)
+            m = re.sub(r'tidal.com\/browse\/', 'tidal.com/', m)
             url = urlparse(m)
             components = url.path.split('/')
             if not components or len(components) <= 2:
