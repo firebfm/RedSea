@@ -6,6 +6,7 @@ import re
 import sys
 
 import requests
+import unicodedata
 
 from .decryption import decrypt_file, decrypt_security_token
 from .tagger import FeaturingFormat
