@@ -6,6 +6,7 @@ import re
 import sys
 
 import requests
+import unicodedata
 
 from .decryption import decrypt_file, decrypt_security_token
 from .tagger import FeaturingFormat
@@ -57,9 +58,11 @@ class MediaDownloader(object):
         else:
             return False
 
-    def _sanitise_name(self, name):
-        name = re.sub('[\\\/*?"<>|]', '', name)
-        return re.sub('[:]', ' - ', name)
+    def _sanitise_name(self, value):
+        value = str(value)
+        value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
+        value = re.sub(r'[^\w\s-]', '', value).strip()
+        return re.sub(r'[-\s]+', ' ', value)
 
     def _normalise_info(self, track_info, album_info, use_album_artists=False):
         info = {
