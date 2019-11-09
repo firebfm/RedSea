@@ -126,7 +126,7 @@ Config reference
 
 `path`: Base download directory
 
-Format variables are `{title}`, `{artist}`, `{album}`, `{tracknumber}`.
+Format variables are `{title}`, `{artist}`, `{album}`, `{tracknumber}` and `{albumartist}`.
 
 `track_format`: How tracks are formatted. The relevant extension is appended to the end.
 
