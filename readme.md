@@ -6,7 +6,7 @@ Music downloader and tagger for Tidal. For educational use only, and may break i
 
 Current state
 -------------
-RedSea is currently being worked on by members of RED. Reach out to RedSudo for more info
+RedSea as it stands is no longer supported by me (redsudo). It has been deprecated in favor of a more functional replacement. Feel free to fork and revive it though. I will also occasionally look at PRs.
 
 Introduction
 ------------
